@@ -5,10 +5,8 @@ function onInit() {
 
 function renderPortfolios() {
   var projs = onGetProjs();
-  console.log(projs);
   var strHTML = projs
     .map(function (proj) {
-      console.log(proj);
       return ` <div class="col-md-4 col-sm-6 portfolio-item">
         <a class="portfolio-link" data-toggle="modal" href="#portfolioModal1">
         <div class="portfolio-hover">
@@ -16,9 +14,9 @@ function renderPortfolios() {
         <i class="fa fa-plus fa-3x" onclick="renderModal('${proj.id}')"></i>
         </div>
         </div>
-        <img class="img-fluid" src="${proj.imgUrl}" alt="">
+        <img class="img-fluid rounded-top" src="${proj.coverImgUrl}" alt="">
         </a>
-        <div class="portfolio-caption">
+        <div class="portfolio-caption rounded">
         <h4>${proj.name}</h4>
         <p class="text-muted">${proj.name}</p>
         </div>
@@ -44,7 +42,7 @@ function renderModal(projId) {
                     <li>Category: Illustration</li>
                 </ul>
                 <a href="${proj.gitUrl}" target="_blank">
-                  <i class="fa fa-github d-block mb-4"></i>
+                  <i class="fa fa-github fa-3x d-block mb-4"></i>
                 </a>
                 <button class="btn btn-primary" data-dismiss="modal" type="button"><i class="fa fa-times"></i> Close Project</button>`;
    
