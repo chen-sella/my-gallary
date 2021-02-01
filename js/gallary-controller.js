@@ -31,15 +31,13 @@ function renderModal(projId) {
   console.log(proj);
   var strHTML = ` <h2>${proj.name}</h2>
                 <h1>${proj.title}</h1>
-                <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+                <p class="item-intro text-muted">A bit of information regarding this project:</p>
                 <img class="img-fluid d-block mx-auto" src="${proj.imgUrl}" alt="">
-                <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est
-                      blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae
-                      cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                <p></p>
                 <ul class="list-inline">
                     <li>Date: ${proj.publishedAt}</li>
                     <li>Client: Coding Academy</li>
-                    <li>Category: Illustration</li>
+                    <li>Category: ${proj.labels}</li>
                 </ul>
                 <a href="${proj.gitUrl}" target="_blank">
                   <i class="fa fa-github fa-3x d-block mb-4"></i>
